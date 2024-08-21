@@ -3,10 +3,12 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import * as echarts from 'echarts';
 import { NgxEchartsDirective, provideEcharts } from 'ngx-echarts';
 import { TimeChartComponent } from './app/time-chart/time-chart.component';
+import { TimeSeriesChartComponent } from './app/time-series-chart/time-series-chart.component';
+import { MarkAreaChartComponent } from './app/mark-area-chart/mark-area-chart.component';
 
 @Component({
   selector: 'app-root',
-  imports: [TimeChartComponent],
+  imports: [TimeChartComponent, TimeSeriesChartComponent, MarkAreaChartComponent],
   standalone: true,
   template: `
     <h1>Hello from {{ name }}!</h1>
@@ -15,6 +17,9 @@ import { TimeChartComponent } from './app/time-chart/time-chart.component';
     </a>
 
     <app-time-chart></app-time-chart>
+    <app-mark-area-chart></app-mark-area-chart>
+    <app-time-series-chart> </app-time-series-chart>
+
   `,
 })
 export class App {
