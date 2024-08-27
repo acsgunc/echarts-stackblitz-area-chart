@@ -36,6 +36,7 @@ export class TimeChartComponent implements OnInit {
       series: [
         {
           type: 'line',
+          step: 'end',
           data: [
             ['2024-08-21T00:00:00', 1],
             ['2024-08-21T01:00:00', 0],
